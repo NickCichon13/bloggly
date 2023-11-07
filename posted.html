@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Posts</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 class="heading-four">User {{user.first_name}} {{user.last_name}} Posts</h1>
+    {% for post in user.posts%}
+<ul>
+    <li>{{post.title}}</p>
+        <p>{{post.content}}</p>
+</ul>
+    {% endfor %}
+<a href="/" class="back-user-page" >
+    Back to User Page
+</a>
 
+<a href="/" class="edit-post">
+    edit post
+</a>
+
+<a href="/users/{{user.id}}/posts/new" class="make-a-post">
+    Make Another Post
+</a>
+</body>
+</html>
