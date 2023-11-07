@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    
+    <h1 class="heading-three" >Changing user information for:  {{user.first_name}} {{user.last_name}}</h1>
+   
+    <form class="form-three" action="/users/{{user.id}}/edit" method="POST">
+        
+        <input style="height:30px" size="50" type="text" name="first_name" placeholder="First Name">
+        <br>
+        <br>
 
+        
+        <input style="height:30px" size="50" type="text" name="last_name" placeholder="Last Name">
+        <br>
+        <br>
+
+       
+        <input style="height:30px" size="50" type="text" name="image_url" placeholder="Image Url">
+        <br>
+        <br>
+   
+            <a href="/">
+                <button class="submit-three" >
+                    Submit Changes
+                </button>
+            </a>
+    </form>
+
+    <a href="/" >
+        <button class="edit-three">
+             Cancel Edit
+        </button>
+    </a>    
+    
+</body>
+</html>
