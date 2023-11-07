@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE USER</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 class="heading-two">CREATE A NEW USER</h1>
+    
+    <div class="form-one">
+    <form  action="/create" method="POST">
+        
+        <input style="height:30px" size="50" type="text" name="first_name" placeholder="first name">
+        <br>
+        <br>
 
+        
+        <input style="height:30px" size="50" type="text" name="last_name" placeholder="last name">
+        <br>
+        <br>
+       
+        <input style="height:30px" size="50" type="text" name="image_url" placeholder="image url">
+        <br>
+        <br>
+
+        <div class="submit">
+        <button class ="submit" type="submit">SUBMIT NEW USER</button>
+        </div>
+        
+    </form>
+
+    </div>
+    <div class="cancel">
+    <a href="/">
+        <button> CANCEL NEW USER</button>
+        </a>
+    </div>
+</body>
+</html>
