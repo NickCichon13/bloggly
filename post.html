@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make A Post</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    
+    <h1 class="heading-two">Add a Post</h1>
+    
+    <form class="form-two"  action="/users/{{user.id}}/posts/new" method="POST">
+    
+        <label>Please add title here:</label>
+        <br>
 
+        <input type="text" name="title" placeholder="title">
+        <br>
+
+        <label>Plase add conetent here:</label>
+        <br>
+
+        <textarea type="text" name="content" placeholder="content" rows="4"cols="50">
+            </textarea>
+            <br>
+       <div class="submit-two">
+        <a href="/">
+        <button type="submit">submit post</button>
+        </a>
+    </div>
+    </form>
+<div class="cancel-two">
+    <a href="/">
+        <button>Cancel post</button>
+    </a>
+</div>
+</body>
+</html>
