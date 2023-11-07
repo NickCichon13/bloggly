@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Listing</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
 
+<body>
+    <h1 class="first-heading">BLOGGLY</h1>
+    
+    {% for user in users %}
+    <h2>User Details for {{user.first_name}} {{user.last_name}}</h2>
+    <ul>
+        
+        <li>User First Name: {{user.first_name}}</li>
+        <li>User Last Name: {{user.last_name}}</li>
+        <li>User Id: {{user.id}}</li>
+       
+    </ul>
+
+    <h2>User: {{user.first_name}} {{user.last_name}} Post</h2>
+
+    <ul class="post">
+        {% for post in user.posts %}
+        <li>
+            <a href="/users/{{user.id}}">{{post.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div>
+    <img src="{{user.image_url}}">
+    </div>
+    <a href="/users/{{user.id}}/edit">
+<button class="edit">
+    Edit
+</button>
+
+    <a href="/users/{{user.id}}/posts/new">
+<button class="make-post">
+    Make A Post
+</button>
+    </a>
+
+
+    <a href="/users/{{user.id}}/delete">
+        <button class="delete">
+            Delete User
+        </button>
+            </a>
+<!-- <h2>User: {{user.first_name}} {{user.last_name}} Post</h2>
+
+<ul>
+    {% for post in user.posts %}
+    <li>
+        <a href="/users/{{user.id}}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+</ul> -->
+<!-- <a href="/users/{{user.id}}/posts/new">
+<button class="make-post">
+    Make A Post
+</button>
+</a> -->
+<br>
+<br>
+{% endfor %}
+
+    
+<a href= "/create" class="new-user">
+    Create New User
+</a>
+</body>
+</html>
